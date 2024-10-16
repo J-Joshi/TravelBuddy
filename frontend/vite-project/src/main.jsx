@@ -10,6 +10,9 @@ import LearnMorePage from "./Pages/learnMore.jsx";
 import ContactPage from "./Pages/contact.jsx";
 import ServicesPage from "./Pages/services.jsx";
 import UserProfilePage from "./Pages/userProfile.jsx";
+import TravelDetailsPage from "./Pages/travellingDestinations.jsx";
+import Quote from "./Pages/quote.jsx";
+import MatchedBuddy from "./Pages/matchedBuddy.jsx";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +46,18 @@ const router = createBrowserRouter([
   {
     path: "/userprofile",
     element: <UserProfilePage />,
+  },
+  {
+    path: "/travellingdestinations",
+    element: <TravelDetailsPage />,
+  },
+  {
+    path: "/quote",
+    element: <Quote />,
+  },
+  {
+    path: "/matchedbuddy",
+    element: <MatchedBuddy />,
   },
 ]);
 createRoot(document.getElementById("root")).render(

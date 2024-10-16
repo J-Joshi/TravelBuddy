@@ -5,6 +5,7 @@ dotenv.config({
 });
 // import express from "express";
 import connectDB from "./db/index.js";
+import { seedPlaces } from "./databseSeeding/placeSeeding.js";
 
 // const app = express();
 
@@ -17,7 +18,8 @@ connectDB()
   .catch((err) => {
     console.log("MONGO DB connection failed ", err);
   });
-
+// seeding of the places
+seedPlaces();
 // app.listen(process.env.PORT , () =>{
 //     console.log(`App is listening on PORT ${process.env.PORT}`)
 // })
