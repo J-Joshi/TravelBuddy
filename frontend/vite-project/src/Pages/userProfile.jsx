@@ -179,9 +179,6 @@ const UserProfilePage = () => {
             </div>
           </div>
           <div className="mt-6 flex justify-center space-x-4">
-            <button className="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
-              Edit Profile
-            </button>
             <button
               onClick={goToTravelDetails}
               className="bg-green-600 text-white py-2 px-6 rounded-lg hover:bg-green-700 transition duration-300"

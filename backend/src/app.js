@@ -308,6 +308,7 @@ app.post("/api/findbuddy", authMiddleware, async (req, res) => {
   // console.log(new Date(time - timeWindow));
   // console.log(travelDateTime - timeWindow);
   // console.log(new Date(travelDateTime - timeWindow));
+
   let potentialMatches = [];
   try {
     potentialMatches = await TravelDetails.find({

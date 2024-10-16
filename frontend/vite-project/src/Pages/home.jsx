@@ -13,7 +13,8 @@ const HomePage = () => {
             Welcome to Travel Buddy
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            We offer amazing services to help you achieve your goals.
+            Find your perfect travel companion and explore destinations
+            together, making every journey more meaningful{" "}
           </p>
           <div className="flex justify-center gap-4 mb-8">
             <Link to="/signup">
@@ -32,6 +33,17 @@ const HomePage = () => {
               Learn More
             </button>
           </Link>
+        </div>
+        {/* Image Section */}
+        <div className="text-center mx-auto w-full py-6">
+          <p className="text-lg font-bold ">Find The Perfect Travel Buddy</p>
+        </div>
+        <div className="text-center py-10">
+          <img
+            src="https://findtravelpartnerapp.wordpress.com/wp-content/uploads/2020/09/need-to-take-care-of-when-traveling-with-your-travel-partner.jpg" // Replace this with your actual image link
+            alt="Travel Destination"
+            className="mx-auto w-full max-w-md h-auto border-4 border-gray-900 rounded-lg"
+          />
         </div>
       </section>
       <Footer /> {/* Footer */}
