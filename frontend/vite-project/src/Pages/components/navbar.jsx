@@ -11,7 +11,7 @@ const Navbar = () => {
   // Optionally, decode JWT to get user info (if it's encoded in the payload)
   // Assuming user data is stored in localStorage
   const getUser = async () => {
-    const response = await fetch("http://localhost:8000/api/userprofile", {
+    const response = await fetch("https://travelbuddy-as87.onrender.com/api/userprofile", {
       headers: {
         Authorization: `Bearer ${token}`, // Add a space here
       },
