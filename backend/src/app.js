@@ -113,7 +113,7 @@ app.get("/api/userprofile", authMiddleware, async (req, res) => {
 
 app.post("/api/usertravel", authMiddleware, async (req, res) => {
   const { state, city, area, date, time } = req.body;
-  const travelDateTime = new Date(`${date}T${time}:00`);
+  const travelDateTime = new Date(`${date}T${time}:00+05:30`);
   console.log(req.body);
   const userEmail = req.email; // Extracted email from token by middleware
   const user = await User.findOne({ email: userEmail });
