@@ -129,7 +129,7 @@ const LoginPage = () => {
     const userData = { email, password };
 
     try {
-      const response = await fetch("http://localhost:8000/api/login", {
+      const response = await fetch("https://travelbuddy-as87.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
