@@ -31,7 +31,7 @@ const UserProfilePage = () => {
   const getTracvellingDetails = async () => {
     const token = localStorage.getItem("token");
     const response = await fetch(
-      "http://localhost:8000/api/userTravelDetails",
+      "https://travelbuddy-as87.onrender.com/api/userTravelDetails",
       {
         method: "GET",
         headers: {
