@@ -13,6 +13,7 @@ import UserProfilePage from "./Pages/userProfile.jsx";
 import TravelDetailsPage from "./Pages/travellingDestinations.jsx";
 import Quote from "./Pages/quote.jsx";
 import MatchedBuddy from "./Pages/matchedBuddy.jsx";
+import MoodRecommendation from "./Pages/moodRecomendation.jsx";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
   {
     path: "/matchedbuddy",
     element: <MatchedBuddy />,
+  },
+  {
+    path: "/moodrecommendation",
+    element: <MoodRecommendation />,
   },
 ]);
 createRoot(document.getElementById("root")).render(

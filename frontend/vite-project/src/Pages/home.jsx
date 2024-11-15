@@ -4,7 +4,7 @@ import Footer from "./components/footer.jsx"; // Import Footer component
 import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col ">
       <Navbar /> {/* Navbar component */}
       {/* Hero Section */}
       <section className="flex-grow bg-blue-50 py-20">

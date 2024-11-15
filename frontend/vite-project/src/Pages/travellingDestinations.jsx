@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./components/navbar";
 
 const TravelDetailsPage = () => {
+  const location = useLocation();
+  const initialPlace = location.state || {};
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [state, setState] = useState("");
-  const [city, setCity] = useState("");
-  const [area, setArea] = useState("");
+  const [state, setState] = useState(initialPlace.state || "");
+  const [city, setCity] = useState(initialPlace.city || "");
+  const [area, setArea] = useState(initialPlace.area || "");
   const [places, setPlaces] = useState([]);
   const [stateSuggestions, setStateSuggestions] = useState([]);
   const [citySuggestions, setCitySuggestions] = useState([]);
@@ -15,7 +17,7 @@ const TravelDetailsPage = () => {
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log(state);
     const token = localStorage.getItem("token");
     const destination = { date, time, state, city, area };
     console.log(destination);

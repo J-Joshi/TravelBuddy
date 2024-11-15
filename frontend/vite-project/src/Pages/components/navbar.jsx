@@ -23,6 +23,9 @@ const Navbar = () => {
       console.log("user not found");
     }
   };
+  const getMood = async () => {
+    navigate("/moodrecommendation");
+  };
 
   const handleLogout = () => {
     // Remove token and user info on logout
@@ -47,11 +50,6 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/services" className="text-gray-600 hover:text-blue-600">
-              Services
-            </Link>
-          </li>
-          <li>
             <Link to="/contact" className="text-gray-600 hover:text-blue-600">
               Contact
             </Link>
@@ -66,6 +64,14 @@ const Navbar = () => {
                   className="text-gray-600 hover:text-blue-600 font-bold"
                 >
                   {"Profile"} {/* Display user's name if available */}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={getMood}
+                  className="text-gray-600 hover:text-blue-600 font-bold"
+                >
+                  Mood Safari
                 </button>
               </li>
               <li>

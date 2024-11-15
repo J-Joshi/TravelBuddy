@@ -6,6 +6,7 @@ dotenv.config({
 // import express from "express";
 import connectDB from "./db/index.js";
 import { seedPlaces } from "./databseSeeding/placeSeeding.js";
+import { seedMoodsForAreas } from "./databseSeeding/seedPlacesMood.js";
 
 // const app = express();
 
@@ -20,6 +21,8 @@ connectDB()
   });
 // seeding of the places
 seedPlaces();
+// seeding of the mood to places
+seedMoodsForAreas();
 // app.listen(process.env.PORT , () =>{
 //     console.log(`App is listening on PORT ${process.env.PORT}`)
 // })

@@ -8,6 +8,7 @@ import bcrypt from "bcryptjs";
 import authMiddleware from "./middlewares/auth.middleware.js";
 import { TravelDetails } from "./models/user.travellingDetails.model.js";
 import { getCoordinates, haversineDistance } from "./utils/osmCoordinates.js";
+import recommendationRoutes from "./routes/recommendations.route.js";
 
 const app = express();
 app.use(
@@ -457,4 +458,8 @@ app.get("/", (req, res) => {
 app.get("/login", (req, res) => {
   res.send();
 });
+
+// api for the ml mood model places recommendations.
+app.use("/api", recommendationRoutes);
+
 export { app };
