@@ -12,7 +12,7 @@ const UserProfilePage = () => {
   const getUserProfile = async () => {
     const token = localStorage.getItem("token");
 
-    const response = await fetch("http://localhost:8000/api/userprofile", {
+    const response = await fetch("https://travelbuddy-as87.onrender.com/api/userprofile", {
       headers: {
         Authorization: `Bearer ${token}`, // Add a space here
       },
@@ -73,7 +73,7 @@ const UserProfilePage = () => {
     const destination = { state, city, area, date, time };
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://localhost:8000/api/findbuddy", {
+      const response = await fetch("https://travelbuddy-as87.onrender.com/api/findbuddy", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
