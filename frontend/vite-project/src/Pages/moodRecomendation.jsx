@@ -18,7 +18,7 @@ const MoodRecommendation = () => {
   useEffect(() => {
     const fetchPlaces = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/places");
+        const response = await fetch("https://travelbuddy-as87.onrender.com/api/places");
         const data = await response.json();
         setPlaces(data);
       } catch (error) {
@@ -133,7 +133,7 @@ const MoodRecommendation = () => {
       console.log(`mood ha => ${mood}`);
       // Step 2: Send the mood, state, city, and area to your Node.js backend
       const placesResponse = await fetch(
-        "http://localhost:8000/api/suggest-areas",
+        "https://travelbuddy-as87.onrender.com/api/suggest-areas",
         {
           method: "POST",
           headers: {
