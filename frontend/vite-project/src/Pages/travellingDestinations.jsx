@@ -22,7 +22,7 @@ const TravelDetailsPage = () => {
     const destination = { date, time, state, city, area };
     console.log(destination);
     try {
-      const response = await fetch("http://localhost:8000/api/usertravel", {
+      const response = await fetch("https://travelbuddy-as87.onrender.com/api/usertravel", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ const TravelDetailsPage = () => {
 
   useEffect(() => {
     const fetchPlaces = async () => {
-      const response = await fetch("http://localhost:8000/api/places");
+      const response = await fetch("https://travelbuddy-as87.onrender.com/api/places");
       const data = await response.json();
       setPlaces(data);
     };
