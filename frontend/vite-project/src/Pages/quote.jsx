@@ -10,7 +10,7 @@ const Quote = () => {
   const populateQuote = async () => {
     try {
       const token = localStorage.getItem("token");
-      const request = await fetch("http://localhost:8000/api/user", {
+      const request = await fetch("https://travelbuddy-as87.onrender.com/api/user", {
         // methode: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
