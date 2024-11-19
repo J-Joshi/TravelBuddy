@@ -112,7 +112,7 @@ const MoodRecommendation = () => {
       const token = localStorage.getItem("token");
       console.log("mood dekhne se pahle");
       const moodResponse = await fetch(
-        "https://ec2-3-27-146-145.ap-southeast-2.compute.amazonaws.com:8080/analyze",
+        "http://ec2-54-206-180-250.ap-southeast-2.compute.amazonaws.com:8080/analyze",
         {
           method: "POST",
           headers: {
