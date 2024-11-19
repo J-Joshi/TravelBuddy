@@ -11,9 +11,23 @@ import { getCoordinates, haversineDistance } from "./utils/osmCoordinates.js";
 import recommendationRoutes from "./routes/recommendations.route.js";
 
 const app = express();
+const allowedOrigins = [
+  "http://localhost:5173", // Local dev
+  "https://travelbuddy-frontend.onrender.com"  // Production frontend
+];
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps or curl requests)
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
